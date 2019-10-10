@@ -13,7 +13,11 @@ const view = new MapView({
   zoom: 12
 });
 
+// module test
+
 const thisDog = new PigDog();
 thisDog.name = 'willy';
 thisDog.belly = 5;
 thisDog.introduce();
+
+// https://developers.arcgis.com/javascript/latest/sample-code/widgets-custom-widget/index.html
