@@ -12,6 +12,14 @@
         height: 100%;
         width: 100%;
       }
+
+      .esri-hello-world {
+        display: inline-block;
+      }
+
+      .esri-hello-world--emphasis {
+        font-weight: bold;
+      }
     </style>
     <link rel="stylesheet" href="https://js.arcgis.com/4.13/esri/themes/light/main.css">
     <script>
@@ -28,7 +36,10 @@
     <script src="https://js.arcgis.com/4.13"></script>
   </head>
   <body>
-    <div id="viewDiv"></div>
+    <div id="viewDiv">
+      <div id="widgetDiv" class="esri-widget"></div>
+    </div>
+
     <script>require(["app/main"]);</script>
   </body>
 </html>
