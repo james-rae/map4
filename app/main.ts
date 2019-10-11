@@ -6,6 +6,7 @@ import {PigDog} from "./grunt";
 import HelloWorld from "./HelloWorld";
 import { Point, SpatialReference } from "esri/geometry";
 import { PictureMarkerSymbol, SimpleMarkerSymbol } from "esri/symbols";
+import Recenter from "./recenter"
 
 const map = new EsriMap({
   basemap: "topo"
@@ -112,3 +113,9 @@ widget.set(names[++nameIndex % names.length]);
 setInterval(changeName, 1000);
 
 // https://developers.arcgis.com/javascript/latest/sample-code/widgets-custom-recenter/index.html
+
+const recenter = new Recenter({
+  view: view,
+  initialCenter: [-100.33, 43.69]
+});
+view.ui.add(recenter, "top-right");
