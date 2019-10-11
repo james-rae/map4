@@ -71,6 +71,16 @@ const island = new GraphicsLayer({
 
 map.add(island);
 
+view.watch("zoom", (newVal, oldVal) => {
+  console.log('saw a zoom');
+  t1.symbol = new PictureMarkerSymbol({
+    url: tileXB64, //"./img/tilex.jpg",
+    width: "50px",
+    height: "50px"
+  });
+
+});
+
 // https://developers.arcgis.com/javascript/latest/sample-code/widgets-custom-widget/index.html
 
 var names = [
